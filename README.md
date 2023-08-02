@@ -248,4 +248,166 @@ const Header = (props) => {
 
 ## Object methods and "this" ##
 
+We can assign methods to an object by defining properties that are functions:
+```
+const arto = {
+  name: 'Arto Hellas',
+  age: 35,
+  education: 'PhD',
+  greet: function() {
+    console.log('hello, my name is ' + this.name)
+  },
+}
+
+arto.greet()  // "hello, my name is Arto Hellas" gets printedcopy
+```
+
+
+
+
+
+
+```
+const arto = {
+  name: 'Arto Hellas',
+  age: 35,
+  education: 'PhD',
+  greet: function() {
+    console.log('hello, my name is ' + this.name)
+  },
+}
+
+arto.growOlder = function() {
+  this.age += 1
+}
+
+console.log(arto.age)   // 35 is printed
+arto.growOlder()
+console.log(arto.age)   // 36 is printed
+```
+
+you may then modify the object.
+
+```
+const arto = {
+  name: 'Arto Hellas',
+  age: 35,
+  education: 'PhD',
+  greet: function() {
+    console.log('hello, my name is ' + this.name)
+  },
+  doAddition: function(a, b) {
+    console.log(a + b)
+  },
+}
+
+arto.doAddition(1, 4)        // 5 is printed
+
+const referenceToAddition = arto.doAddition
+referenceToAddition(10, 15)   // 25 is printed
+
+  ```
+
+
+Now the object has the method doAddition which finds the sum of numbers given to it as parameters, this method is called intehusualty way, that means it uses the object arto.toAddition(1,4) by storing a method reference in a variable and calling the method through the variable: referenceToAddition(10,15). 
+
+
+
+if we try to do the same method greet, we run into an issue.
+
+
+arto.greet()
+ //"hello, my name is Arto Hellas" gets printed
+
+const referenceToGreet = art0.gree
+referenceToGreet() //prints "hello, my name is undefined"
+
+## Object methods AND "this" ##
+
+bc the ver. we use of react does contain react hooks thus no need to define objects with methods.
+
+how you define functions and the use of keyword this really vary.
+
+ofc, you can assign methods to an object like usual, this is done by definin properties that are functions.
+
+ ```
+const arto = {
+name: 'Arto Hellas',
+age: 35, 
+education: 'PHD',
+greet: function() {
+console.log('hello, my name is ' + this.name)
+},
+}
+
+arto.greet()  //the greet part gest printed. 
+// prints: "hello, my name is Arto Hellas"
+
+ 
+ ```
+
+OFC, if after you defined it you wanted more methods, like arto.greet() isn't enough and u need more, you can create such objects.
+you create it outside of the function, with
+
+arto.growOlder = function () {this.age += 1 }
+
+
+now, if you output
+
+console.log(arto.age) //35 is printed
+arto.growOlder()
+console.log(arto.age)  //36 is printed
+
+
+Let's say that you add another method to const arto 
+
+ ```
+doAddition: function(a, b) {
+    console.log(a + b)
+  },
+ ```
+
+first if u call it it outputs
+ ```
+arto.doAddition(1, 4) 
+// 5 is printed
+ ```
+
+you can also define a const and reference it, and then you can use the const.
+
+ ```
+const referenceToAddition = arto.doAddition 
+referenceToAddition(10,15)  //25 printed 
+
+ ```
+
+Well, that was interesting, so if we were to do that process again, but instead, assign arto.greet() to referenceToAddition, would the same happen?
+
+ ```
+arto.greet()       // "hello, my name is Arto Hellas" gets printed
+
+const referenceToGreet = arto.greet
+referenceToGreet() // prints "hello, my name is undefined"
+ ```
+
+when calling method thru reference, the method loses knowledge of what orginal this was.
+
+in JS, contrary to other languages, the value of this is defined based on HOW THE METHOD WAS CALLED>
+
+when you call a method thru reference, the value of this becomes the global object and the end result isnt what one intended.
+
+losing track of this when writing JS brings issues, one disappearence of this arises when we set a timeout to call the greet function on the arto object, using the setTimeout function.
+
+
+## What is a setTimeout function? ##
+
+The global setTimeout() method sets a timer which executes a function or specified piece of code once the timer expires.
+
+check out this link on the methods & issues with it & solutions: https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+
+setTimeout(arto.greet.bind(arto), 1000)copy
+Calling arto.greet.bind(arto) creates a new function where this is bound to point to Arto, independent of where and how the method is being called.
+
+
+
 
