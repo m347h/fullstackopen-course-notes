@@ -98,10 +98,11 @@ console.log(value)
 outputes the numbers in the array: 1, -1, 3, 5, each to its **own line**
 
 Okay, how to add an element to an existign array and create such a new array? 
-
+```
 const t = [1,2,4]
 const t2 = t.concat(5) //creates new array 
 console.log(t) //prints [1,2,4]
 console.log(t2) //prints [1,2,4,5]
 
+```
 
