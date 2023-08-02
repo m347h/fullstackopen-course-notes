@@ -107,3 +107,16 @@ console.log(t2) //prints [1,2,4,5]
 
 ```
 
+Many useful methods for arrays, one of them being **map** 
+
+
+```
+const t = [1,2,3]
+
+const m1 = t.map(value => value*2)
+
+console.log(m1) // this is where an arrayx2 is printed
+
+```
+
+
