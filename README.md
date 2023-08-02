@@ -199,15 +199,14 @@ const square = p => {
 Moreover, one of the more ancient ways of referencing a function was simply giving a function declaraiton.
 
 ```
-function product(a, b) {
-  return a * b
+function products (a,b){
+return a*b; 
 }
 
-const result = product(2, 6)
-// result is now 12
+const result = product (2,6) 
+// result = 12
 
 ```
-
 
 Another way of defining or referencing functions would be usin ga dunciton expression :
 
@@ -216,9 +215,12 @@ const average = function(a,b) {
 return (a+b)/2
 }
 
+// above, you may define the function to be a constant. you may say cosnt average = function (a,b)
+
 
 const result = average(2,5)
 
+// and toouput, you may define const result = average(2,5) --> 3.5 
 //result is 3.5 
 
 ```
@@ -226,9 +228,24 @@ const result = average(2,5)
 
 ## exercise 1.3 ## 
 
+it was hinted that: problems may occur when the structure of the props that components recieve.
+A good way to make things more clear = printing the props to console.
+
+//  console.log(props)
+
+which tbh, was something that you have done all the time.
+
+moving forwards...
+
+we can use objects in our applciation, we can modify variable definitions of the App component as follows and also refactor the application so that it still works
+
 
 const Header = (props) => {
   console.log(props)
   return <h1>{props.course}</h1>
 }
-  
+
+
+## Object methods and "this" ##
+
+
