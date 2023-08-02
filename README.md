@@ -1,6 +1,6 @@
 # fullstackopen-course-notes
 
-Firstly, we start with some notes from previous lesson's homework: in Part 1 a) introduction to react (homework exercise), in another github's sample solution, a method called "reduce" was used in React, which was applied when they were summing up the total number of exercises with the use of an accumulator. In the solution, we had to define a const Total, in which we had to apply this "reduce" and use accumulator. 
+Firstly, we start with some notes from previous lesson's homework: in Part 1 a) introduction to react (homework exercise), in another github's sample solution, a method called "reduce" was used in React, which was applied when they were summing up the total number of exercises with the use of an accumulator. In the solution, we had to define a "const Total" handler, in which we had to apply this "reduce" and use accumulator. 
 
 ```
 const Total = ({parts}) => {
@@ -16,7 +16,7 @@ such as name and exercises, which one do we want to accumulate? OBVS, its exerci
 const totalExercises = parts.reduce((accumulator, currentObj) => accumulator + currentObj.exercises, 0);
 
 ```
-Now, remember that it was in const App, that we defined the array and the parts. To revise the code, see below.  
+Now, remember that it was in App handler (const App), that we defined the array and the parts. To revise the code, see below.  
 
 ```
 const Total = ({ parts }) => {
