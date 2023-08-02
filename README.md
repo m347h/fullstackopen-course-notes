@@ -223,4 +223,12 @@ const result = average(2,5)
 
 ```
 
+
+## exercise 1.3 ## 
+
+
+const Header = (props) => {
+  console.log(props)
+  return <h1>{props.course}</h1>
+}
   
