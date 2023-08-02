@@ -51,20 +51,48 @@ const App = () => {
 
  # continue onto part 1 b) javascript 
 
-javasript is a reminiscent, in name (obv!) and syntax of JAVA, but core mechanisms, so differnert! 
+javasript is a reminiscent, in terms of 1) name (obv!) and 2) syntax of JAVA, but core mechanisms, so different! 
 
+let's talk about variable:
 
+in JS, there are few ways to define variables.
+```
+const x = 1 
+let y = 5
+
+console.log(x,y)
+y += 10  // y = y+ 10 = 5+ 10 = 15 
+console.log(x,y)
+// "1, 15" are printed 
+y = 'sometext'
+console.log(x,y)
+// "1, sometext" are printed 
+x = 4 //causes an error, as const was defined 
+ 
+```
+
+It was shown that datatypes can be changed. 
+
+let defines a normal variable, while const defines a constant. 
+
+var can B used too. 
+
+**Arrays**
+An array and a couple of examples of its use:
+```
+const t = [1, -1, 3]
+t.push(5)
+```
 
 ```
-function test() {
-  console.log("notice the blank line before this function?");
-}
-
-
-const App = () => {
-    const anecdotes = [
-        'If it hurts, do it more often.',
-        'Adding manpower to a late software project makes it later!',
-       
-
+console.log(t.length) // 4 is printed
+console.log(t[1]) 
 ```
+ // printing length and the element 
+ 
+```
+t.forEach(value => {
+console.log(value)
+})
+```
+outputes the numbers in the array: 1, -1, 3, 5, each to its **own line**
