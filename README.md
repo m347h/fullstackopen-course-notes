@@ -119,4 +119,25 @@ console.log(m1) // this is where an arrayx2 [2,4,6] is printed
 
 ```
 
+**Objects**
+There are a few different ways of defining objects in JavaScript. One very common method is using object literals, which happens by listing its properties within braces:
 
+you can have: 
+```
+const object1 = {
+  name: 'Arto Hellas',
+  age: 35,
+  education: 'PhD',
+}
+```
+
+```
+const object3 = {
+  name: {
+    first: 'Dan',
+    last: 'Abramov',
+  },
+  grades: [2, 3, 5, 3],
+  department: 'Stanford University',
+}
+```
