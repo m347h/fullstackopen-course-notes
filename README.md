@@ -152,7 +152,7 @@ const fieldName = 'age'
 console.log(object1[fieldName]) //35 is printed. 
 
 // you can then define such a const variable and then output it. 
-```
+ 
 Moreover, you can do a lot more things, you could add e.g. an address property. 
 
 ```
