@@ -130,7 +130,7 @@ const object1 = {
   education: 'PhD',
 }
 ```
-
+or you have have ones within one, being like:
 ```
 const object3 = {
   name: {
