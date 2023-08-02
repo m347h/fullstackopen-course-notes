@@ -115,7 +115,7 @@ const t = [1,2,3]
 
 const m1 = t.map(value => value*2)
 
-console.log(m1) // this is where an arrayx2 is printed
+console.log(m1) // this is where an arrayx2 [2,4,6] is printed
 
 ```
 
