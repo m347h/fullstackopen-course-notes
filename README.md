@@ -49,9 +49,9 @@ const App = () => {
   
 ```
 
-Expand the following application by adding a button that can be clicked to display a random anecdote from the field of software engineering:
+ # continue onto part 1 b) javascript 
 
-import { useState } from 'react';
+javasript is a reminiscent, in name (obv!) and syntax of JAVA, but core mechanisms, so differnert! 
 
 
 
