@@ -16,7 +16,7 @@ such as name and exercises, which one do we want to accumulate? OBVS, its exerci
 const totalExercises = parts.reduce((accumulator, currentObj) => accumulator + currentObj.exercises, 0);
 
 ```
-remeber that it was in App, that we defined teh array and the parts. 
+Now, remember that it was in const App, that we defined the array and the parts. To revise the code, see below.  
 
 ```
 const Total = ({ parts }) => {
