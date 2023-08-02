@@ -141,3 +141,83 @@ const object3 = {
   department: 'Stanford University',
 }
 ```
+you can the obv print: 
+
+console.log(object1.name)
+
+you get:  Arto Hellas
+
+const fieldName = 'age' 
+
+console.log(object1[fieldName]) //35 is printed. 
+
+// you can then define such a const variable and then output it. 
+```
+Moreover, you can do a lot more things, you could add e.g. an address property. 
+
+```
+object1.address = 'Helsinki'
+```
+
+the latter addition has to be done using brackets bc when using dot notation, secret number isnt a valid peroprty name. 
+
+```
+object1['secret number'] = 12341
+```
+
+
+**Functions**
+
+functiosn and arrow dunctions,
+
+this is how u define it: 
+
+```
+const sum = (p1, p2) => {
+console.log(p1)
+console.log(p2)
+return p1+p2
+}
+```
+
+
+```
+const result = sum(1, 5)
+console.log(result)
+
+```
+
+
+
+```
+const square = p => {
+  console.log(p)
+  return p * p
+}
+```
+
+Moreover, one of the more ancient ways of referencing a function was simply giving a function declaraiton.
+
+```
+function product(a, b) {
+  return a * b
+}
+
+const result = product(2, 6)
+// result is now 12
+
+```
+
+
+Another way of defining or referencing functions would be usin ga dunciton expression :
+
+const average = function(a,b) {
+return (a+b)/2
+}
+
+
+const result = average(2,5)
+
+//result is 3.5 
+
+  
