@@ -211,6 +211,7 @@ const result = product(2, 6)
 
 Another way of defining or referencing functions would be usin ga dunciton expression :
 
+```
 const average = function(a,b) {
 return (a+b)/2
 }
@@ -219,5 +220,7 @@ return (a+b)/2
 const result = average(2,5)
 
 //result is 3.5 
+
+```
 
   
